@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+## Algorithm Guessing Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple interactive Algorithm Guessing Game built with React that uses a binary tree structure to guide users through a series of questions. The goal of the game is to guess a specific algorithm based on the user's answers to yes/no questions.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+A series of yes/no questions to guess the correct algorithm.
 
-### `npm start`
+Dynamic navigation through a binary tree structure.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Resets automatically after reaching the conclusion.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Leaf nodes (algorithm guesses) hide the yes/no buttons, while intermediate questions allow further navigation.
 
-### `npm test`
+## How To Play
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The game starts with a root question, like "Is it a greedy algorithm?".
 
-### `npm run build`
+Based on your answer (Yes/No), the game will ask a follow-up question or make a guess about the algorithm.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If the game guesses an algorithm (leaf node), it will display the answer and allow you to restart the game by clicking "Play Again".
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If further questions are possible, you’ll be able to continue navigating by answering Yes/No.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Structure
 
-### `npm run eject`
+src/Game.js: The main component that renders the game and handles the logic.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+src/tree.js: The binary tree data structure that powers the game's question flow.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Future Enhancements
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Expand the algorithm database with more questions and algorithms.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Add more interactive features like hints or a progress tracker.
